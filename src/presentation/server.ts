@@ -11,17 +11,19 @@ export class Server {
 		console.log('Server started...');
 
 		// Mandar email
-		const emailService = new EmailService();
+		// const emailService = new EmailService();
 
-		emailService.sendEmail({
-			to: 'xh4rz98@gmail.com',
-			subject: 'Logs de sistema',
-			htmlBody: `
-				<h3>Logs de sistema - NOC</h3>
-				<p>Lorem valit non veniam ullamco ex eu laborum</p>
-				<p>Ver los adjuntos</p>
-			`
-		});
+		// emailService.sendEmail({
+		// 	to: 'xh4rz98@gmail.com',
+		// 	subject: 'Logs de sistema',
+		// 	htmlBody: `
+		// 		<h3>Logs de sistema - NOC</h3>
+		// 		<p>Lorem valit non veniam ullamco ex eu laborum</p>
+		// 		<p>Ver los adjuntos</p>
+		// 	`
+		// });
+
+		// emailService.sendEmailWithFileSystemLogs(['xh4rz98@gmail.com']);
 
 		// CronService.createJob('*/5 * * * * *', () => {
 		// 	const url = 'https://google.com';
