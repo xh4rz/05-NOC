@@ -1,17 +1,17 @@
-import { FileSystemDatasource } from '../infrastructure/datasources/file-system.datasource';
-import { LogRepositoryImpl } from '../infrastructure/repositories/log.repository.impl';
-import { EmailService } from './email/email.service';
+// import { FileSystemDatasource } from '../infrastructure/datasources/file-system.datasource';
+// import { LogRepositoryImpl } from '../infrastructure/repositories/log.repository.impl';
+// import { EmailService } from './email/email.service';
 
-const fileSystemLogRepository = new LogRepositoryImpl(
-	new FileSystemDatasource()
-);
+// const fileSystemLogRepository = new LogRepositoryImpl(
+// 	new FileSystemDatasource()
+// );
 
 export class Server {
 	public static start() {
 		console.log('Server started...');
 
 		// Mandar email
-		// const emailService = new EmailService();
+		// const emailService = new EmailService(fileSystemLogRepository);
 
 		// emailService.sendEmail({
 		// 	to: 'xh4rz98@gmail.com',
