@@ -1,3 +1,4 @@
+import { LogSeverityLevel } from '../domain/entities/log.entity';
 import { CheckService } from '../domain/use-cases/checks/check-service';
 import { FileSystemDatasource } from '../infrastructure/datasources/file-system.datasource';
 import { MongoLogDatasource } from '../infrastructure/datasources/mongo-log.datasource';
@@ -14,7 +15,7 @@ const logRepository = new LogRepositoryImpl(
 // const emailService = new EmailService();
 
 export class Server {
-	public static start() {
+	public static async start() {
 		console.log('Server started...');
 
 		// Mandar email
@@ -47,5 +48,9 @@ export class Server {
 		// 	).execute(url);
 		// 	// new CheckService().execute('http://localhost:3000');
 		// });
+
+		const logs = await logRepository.getLogs(LogSeverityLevel.high);
+
+		console.log(logs);
 	}
 }
