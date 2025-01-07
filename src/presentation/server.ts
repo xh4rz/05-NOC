@@ -49,8 +49,8 @@ export class Server {
 		// 	// new CheckService().execute('http://localhost:3000');
 		// });
 
-		const logs = await logRepository.getLogs(LogSeverityLevel.high);
+		// const logs = await logRepository.getLogs(LogSeverityLevel.high);
 
-		console.log(logs);
+		// console.log(logs);
 	}
 }
